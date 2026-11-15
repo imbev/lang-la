@@ -1,0 +1,151 @@
+comment_char %
+escape_char /
+
+LC_IDENTIFICATION
+title      "Latin locale for Vatican City"
+source     "ISO 3166-1:VA"
+address    ""
+contact    "Isaac Beverly"
+email      "imbev@protonmail.com"
+tel        ""
+fax        ""
+language   "Latin"
+territory  "Vatican City"
+revision   "1.0"
+date       "2026-11-15"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+category "i18n:2012";LC_MEASUREMENT
+END LC_IDENTIFICATION
+
+LC_COLLATE
+copy "iso14651_t1"
+END LC_COLLATE
+
+LC_CTYPE
+copy "i18n"
+
+translit_start
+include "translit_combining";""
+<U00C6> "<U0041><U0045>"	% LATIN CAPITAL LETTER AE
+<U00E6> "<U0061><U0065>"	% LATIN SMALL LETTER AE
+<U0152> "<U004F><U0045>"	% LATIN CAPITAL LIGATURE OE
+<U0153> "<U006F><U0065>"	% LATIN SMALL LIGATURE OE
+translit_end
+END LC_CTYPE
+
+LC_MESSAGES
+yesexpr "^[+1iIsSyY]"
+noexpr  "^[-0nN]"
+yesstr  "ita"
+nostr   "non"
+END LC_MESSAGES
+
+LC_MONETARY
+int_curr_symbol           "EUR "
+currency_symbol           "€"
+mon_decimal_point         ","
+mon_thousands_sep         "."
+mon_grouping              3
+positive_sign             ""
+negative_sign             "-"
+int_frac_digits           2
+frac_digits               2
+p_cs_precedes             0
+p_sep_by_space            1
+n_cs_precedes             0
+n_sep_by_space            1
+p_sign_posn               1
+n_sign_posn               1
+END LC_MONETARY
+
+LC_NUMERIC
+decimal_point             ","
+thousands_sep             "."
+grouping                  3
+END LC_NUMERIC
+
+LC_TIME
+abday   "Dom";/
+	"Fer II";/
+	"Fer III";/
+	"Fer IV";/
+	"Fer V";/
+	"Fer VI";/
+	"Sab"
+day     "Dominica";/
+	"Feria II";/
+	"Feria III";/
+	"Feria IV";/
+	"Feria V";/
+	"Feria VI";/
+	"Sabbatum"
+abmon   "Ian";"Feb";/
+	"Mar";"Apr";/
+	"Mai";"Iun";/
+	"Iul";"Aug";/
+	"Sep";"Oct";/
+	"Nov";"Dec"
+mon     "Ianuarius";/
+	"Februarius";/
+	"Martius";/
+	"Aprilis";/
+	"Maius";/
+	"Iunius";/
+	"Iulius";/
+	"Augustus";/
+	"September";/
+	"October";/
+	"November";/
+	"December"
+d_t_fmt "%a %-d %b %Y, %T"
+d_fmt   "%d//%m//%Y"
+t_fmt   "%T"
+am_pm   "";""
+t_fmt_ampm ""
+date_fmt   "%a %-d %b %Y, %T, %Z"
+week 7;19971130;4
+first_weekday 2
+END LC_TIME
+
+LC_PAPER
+copy "i18n"
+END LC_PAPER
+
+LC_TELEPHONE
+tel_int_fmt    "+%c %a %l"
+int_prefix     "39"
+int_select     "00"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "i18n"
+END LC_MEASUREMENT
+
+LC_NAME
+name_fmt    "%d%t%g%t%m%t%f"
+END LC_NAME
+
+LC_ADDRESS
+postal_fmt    "%f%N%a%N%d%N%b%N%s %h %e %r%N%z %T%N%c%N"
+country_name "Civitas Vaticana"
+country_ab2 "VA"
+country_ab3 "VAT"
+country_num 336
+country_isbn "978-88,979-12"
+country_car  "V"
+lang_name    "lingua Latina"
+lang_ab      "la"
+lang_term    "lat"
+lang_lib     "lat"
+END LC_ADDRESS
